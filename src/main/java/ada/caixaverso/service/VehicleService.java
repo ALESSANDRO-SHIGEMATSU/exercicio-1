@@ -6,7 +6,6 @@ import ada.caixaverso.dto.VehicleResponseBody;
 import ada.caixaverso.model.Vehicle;
 import ada.caixaverso.repository.VehicleRepository;
 import jakarta.ws.rs.NotFoundException;
-import jakarta.ws.rs.core.Response;
 
 import java.util.ArrayList;
 import java.util.List;
