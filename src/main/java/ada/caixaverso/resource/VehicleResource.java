@@ -3,8 +3,7 @@ package ada.caixaverso.resource;
 import ada.caixaverso.dto.UpdateVehicleRequestBody;
 import ada.caixaverso.dto.VehicleRequestBody;
 import ada.caixaverso.dto.VehicleResponseBody;
-import ada.caixaverso.model.Vehicle;
-import ada.caixaverso.repository.VehicleRepository;
+import ada.caixaverso.repository.VehicleDAO;
 import ada.caixaverso.service.VehicleService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -18,11 +17,11 @@ import java.util.List;
 @Consumes(MediaType.APPLICATION_JSON)
 public class VehicleResource {
 
-    private VehicleService vehicleService;
+    private final VehicleService vehicleService;
 
     private VehicleResource(){
-        vehicleService = new VehicleService(new VehicleRepository());
-  ; }
+        vehicleService = new VehicleService(new VehicleDAO());
+    }
 
     @POST
     public Response create(VehicleRequestBody body){

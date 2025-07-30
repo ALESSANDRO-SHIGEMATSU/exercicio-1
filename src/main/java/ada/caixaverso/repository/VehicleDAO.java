@@ -3,10 +3,9 @@ package ada.caixaverso.repository;
 import ada.caixaverso.model.Vehicle;
 
 import java.util.Map;
-import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class VehicleRepository implements RepositoryInterface<Long,Vehicle> {
+public class VehicleDAO implements RepositoryInterface<Long,Vehicle> {
     private final Map<Long, Vehicle> store = new ConcurrentHashMap<>();
 
     @Override
